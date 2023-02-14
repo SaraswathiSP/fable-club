@@ -1,0 +1,159 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root{
+    --m-color-primary: #FF782C;
+    --m-color-secondary: #000000;
+    --m-color-text: #666666;
+    --m-color-accent: #6839CC;
+    --m-color-lighter: #999999;
+    --m-color-dark: #202020;
+    --m-color-highlight: #E56D6D;
+    --m-color-border: #E5E5E5;
+
+    --e-global-color-primary: #FF782C;
+    --e-global-color-secondary: #000000;
+    --e-global-color-text: #666666;
+    --e-global-color-accent: #6839CC;
+    --e-global-color-lighter: #999999;
+    --e-global-color-dark: #202020;
+    --e-global-color-highlight: #E56D6D;
+    --e-global-color-border: #E5E5E5;
+    --e-global-color-blueish: 
+    linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);
+    --e-global-color-rama: #e1f5ff;
+    --e-global-color-yellow: #FCC742;
+}
+
+@font-face {
+    font-family: "Ziggy";
+    src: url("/assets/fonts/new/Ziggy-Bold.woff2");
+    src: url("/assets/fonts/new/Ziggy-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Ziggy";
+    src: url("/assets/fonts/new/Ziggy-Regular.woff2");
+    src: url("/assets/fonts/new/Ziggy-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 700 ;
+}
+body{
+    font-family: Ziggy, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif !important;
+}
+a {
+    text-decoration: none !important;
+    cursor: pointer;
+    color: inherit !important;
+    font-family: Ziggy, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif !important;
+}
+
+
+.fs-10{
+    font-size: 10px !important;
+}
+
+.fs-12{
+    font-size: 12px !important;
+}
+
+.fs-14{
+    font-size: 14px !important;
+}
+
+.fs-16{
+    font-size: 16px !important;
+}
+
+.fs-20{
+    font-size: 20px !important;
+}
+.fs-25{
+    font-size: 25px !important;
+}
+.fs-30{
+    font-size: 30px !important;
+}
+.fs-48{
+    font-size: 48px !important;
+}
+.fs-50{
+    font-size: 50px !important;
+}
+
+.fs-60{
+    font-size: 60px !important;
+}
+
+.fs-64{
+    font-size: 64px !important;
+}
+
+.text-orange {
+    color: var(--e-global-color-primary) !important;
+}
+.text-yellow {
+    color: var(--e-global-color-yellow) !important;
+}
+
+.text-purple{
+    color: var(--e-global-color-accent);
+}
+
+.h-100{
+    height: 100%;
+}
+
+.letter-spacing-1{
+    letter-spacing: 1px !important;
+}
+
+.e-btn{
+    font-family: var(--e-global-typography-primary-font-family);
+    font-weight: var(--e-global-typography-primary-font-weight);
+    text-transform: var(--e-global-typography-primary-text-transform);
+    font-style: var(--e-global-typography-primary-font-style);
+    text-decoration: var(--e-global-typography-primary-text-decoration);
+    line-height: var(--e-global-typography-primary-line-height);
+    letter-spacing: var(--e-global-typography-primary-letter-spacing);
+    background-color: var(--e-global-color-accent);
+    color: #fff;
+    transition: all 0s ease;
+    padding: 11px 26px 11px 26px;
+    border: none;
+}
+
+button.btn-with-arrow:hover  i.bi.bi-chevron-right {
+    background-color: var(--e-global-color-primary) !important;
+    color: #fff !important;
+    transition: ease-in-out 0.2s;
+
+}
+
+.font-weight-700{
+    font-weight: 700;
+}
+.fw-700{
+    font-weight: 700;
+}
+.fw-400{
+    font-weight: 400;
+}
+
+
+@keyframes bring-up {
+    0%   {bottom:0px;}
+    100% {bottom: 20px; display: block;}
+  }
+
+@keyframes take-down {
+    0%   {bottom: 20px;}
+    100% {bottom: 0px; display: none;}
+}

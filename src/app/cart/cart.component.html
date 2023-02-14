@@ -1,0 +1,59 @@
+<app-header></app-header>
+<div class="cart container">
+    <div class="m-5">
+        <h1 class="fs-40 text-orange">Cart</h1>
+        <!-- Starts here -->
+        <div class="d-flex flex-row">
+            <div class="cart-box d-flex flex-column me-5" *ngFor="let data of cartItems">
+                <div class="item-wrapper d-flex justify-content-center align-items-center position-relative">
+                    <h4 class="fs-20 text-secondary fw-700">Ziggy</h4>
+                </div>
+    
+                <div class="price text-purple mt-2 fw-700 fs-16" [ngClass]="{'text-orange': data?.salePrice}"><i class="bi bi-currency-rupee"></i>{{data?.price}} 
+                    <span *ngIf="data?.toPrice"> - {{data?.toPrice}}</span>
+                    <span *ngIf="data?.salePrice" class="text-secondary mx-2 fw-400" 
+                        style="text-decoration: line-through">
+                        <i class="bi bi-currency-rupee"></i>{{data?.salePrice}}</span>
+                </div>
+                <div class="description mt-1 fs-14">{{data?.description}}</div>
+                <div class="quantity d-flex justify-content-start mt-2">
+                    <div class="mx-2 circle-bg rounded-pill px-1" (click)="addItemToCart(data)"><a class="plus"><i class="bi bi-plus"></i></a></div>
+                    <div>{{data?.quantity || 0}}</div>
+                    <div class="mx-2 circle-bg rounded-pill px-1" (click)="removeItemFromCart(data)"><a class="minus"><i class="bi bi-dash"></i></a></div>
+                </div>
+                
+            </div>
+        </div>
+       <!-- Ends here -->
+    </div>
+</div>
+
+<!-- 
+<div class="item">
+    <div class="item-block d-flex flex-column">
+        <div class="item-wrapper d-flex justify-content-center align-items-center position-relative">
+            <div class="onsale fw-700" *ngIf="data?.highlight">{{data?.highlight}}</div>
+            <button class="add-to-cart position-absolute rounded-5 border-0 fs-14 text-white fw-700"
+                (click)="addItemToCart(data)">
+                <i class="bi bi-bag-plus fs-16 pe-1"></i> Add to cart
+            </button>
+            <h4 class="fs-20 text-secondary fw-700">Ziggy</h4>
+        </div>
+        <div class="price text-purple mt-2 fw-700 fs-16" [ngClass]="{'text-orange': data?.salePrice}"><i class="bi bi-currency-rupee"></i>{{data?.price}} 
+            <span *ngIf="data?.toPrice"> - {{data?.toPrice}}</span>
+            <span *ngIf="data?.salePrice" class="text-secondary mx-2 fw-400" 
+                style="text-decoration: line-through">
+                <i class="bi bi-currency-rupee"></i>{{data?.salePrice}}</span>
+        </div>
+        <div class="description mt-1 fs-14">{{data?.description}}</div>
+        <div class="rating mt-1 d-flex flex-row fs-12">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+            <span class="mx-2 text-secondary">(5 reviews)</span>
+        </div>
+        
+    </div>
+</div> -->

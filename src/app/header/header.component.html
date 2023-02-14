@@ -1,0 +1,85 @@
+<div class="col-12 advertisement ">
+    <div class="container d-flex py-2 justify-content-between">
+        <div class="left-block">
+            
+            <a href="#" class="p-2">
+                <span><i class="bi bi-geo-alt"></i></span>
+                <span class="px-2">Find a Store</span>
+            </a>
+            <a href="#" class="p-2">
+                <span><i class="bi bi-truck"></i></span>
+                <span class="px-2">Order Tracking</span>
+            </a>
+        </div>
+        <div class="center-block">
+            <div class="d-flex">
+                <div class="discount px-2">15% off</div>
+                <div class="discount-description px-2">$50+ when you buy online & pick up in-store</div>
+            </div>
+        </div>
+        <div class="right-block">
+            <div class="d-flex me-5">
+                <span>INR</span> 
+                <span><i class="bi bi-chevron-down ps-1 fs-10" ></i></span>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+            </div>
+        </div>    
+    </div>
+</div>
+<div class="col-12 header py-2">
+    <div class="container">
+        <div class="row py-3">
+            <div class="col-7 left-menu-block">
+                <div class="row">
+                    <!-- <div class="col-2"></div> -->
+                    <div class="col-2"><img src="../../assets/images/Fable-Club.svg" alt=""></div>
+                    <div class="col-10 d-flex flex-row justify-content-around align-items-center left-menu">
+                        <a href="" class="p-2 ps-5 highlight">Home</a>
+                        <a routerLink="/products" class="p-2 highlight">
+                            <span>Shop</span> 
+                            <span><i class="bi bi-chevron-down fs-10 ps-1"></i></span>
+                        </a>
+                        <a href="" class="p-2 highlight">
+                            <span>Pages</span> 
+                            <span><i class="bi bi-chevron-down fs-10 ps-1"></i></span>
+                        </a>
+                        <a href="" class="p-2 highlight">
+                            <span>Blog</span> 
+                            <span><i class="bi bi-chevron-down fs-10 ps-1"></i></span>
+                        </a>
+                        <a href="" class="p-2 highlight">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 d-flex flex-row justify-content-around  align-items-center right-menu-block">
+                <div class="search-box border rounded-pill">
+                    <input type="text" class="p-2">
+                </div>
+                <div class="user-icons fs-25 position-relative">                    
+                    <a class="highlight" (click)="toggleDropdown(classList)" (onClose)="toggleDropdown('')">
+                        <i class="bi bi-person p-2 ps-3"></i>
+                    </a>
+                    <app-dropdown [signUpForm]="signUpForm" [loginForm]="loginForm" [classList]="classList" 
+                        (onLogin)="login()" (onLogout)="logout()" (onSignUp)="signUp()">
+
+                    </app-dropdown>
+
+                    <!-- <a href="#" class="highlight"><i class="bi bi-heart p-2 ps-3"></i></a> -->
+                    <a  href="#" class="highlight d-inline-block position-relative">
+                        <span class="d-inline-block position-absolute fs-10 text-white border rounded-pill px-1 right-0" 
+                            style="background: var(--e-global-color-primary);right: 0px;top: -5px;">0</span>
+                        <i class="bi bi-heart p-2 ps-3"></i></a>
+ 
+                    <a  routerLink="/cart" class="highlight d-inline-block position-relative" >
+                        <span class="d-inline-block position-absolute fs-10 text-white border rounded-pill px-1 right-0" 
+                            style="background: var(--e-global-color-primary);right: 0px;top: -5px;">{{cartLength || 0}}</span>   
+                        <i class="bi bi-cart p-2 ps-3"></i>
+                    </a>
+                    <span class="fs-14 ps-3"><i class="bi bi-currency-rupee"></i> 0.00</span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

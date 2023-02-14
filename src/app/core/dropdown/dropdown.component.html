@@ -1,0 +1,44 @@
+<div class="e-dropdown-box p-2 px-3 fs-14 {{classList}}" >
+    <span class="position-absolute d-inline-block mt-3 close-icon" (click)="closeDropdown()" 
+        style="right: 10px; cursor: pointer;">
+        <i class="bi bi-x-lg"></i>
+    </span>
+    <form class="login-form" [formGroup]="loginForm" *ngIf="isLogin && !isLoggedIn" (ngSubmit)="login()">
+        <h3 class="fs-20 mt-3 text-orange">Sign In</h3>
+        <div class="mt-3">
+            <span class="mt-3">Username</span>
+            <input type="text" formControlName="username" class="form-control mt-1">    
+        </div>
+        <div class="my-4">
+            <span class="">Password</span>
+            <input type="password" formControlName="password" class="form-control mt-1">    
+        </div>
+    
+        <div class="mt-4 mb-3">
+            <input type="submit" class="e-btn d-button rounded-5" value="Login">
+        </div>
+        <div class="text-body-tertiary mb-2">Don't have account? 
+            <a href="#" class="text-orange" (click)="isLogin = false">Register</a></div>    
+    </form>
+    <form class="register-form" *ngIf="!isLogin && !isLoggedIn" [formGroup]="signUpForm" (ngSubmit)="signUp()">
+        <h3 class="fs-20 mt-3 text-orange">Sign Up</h3>
+        <div class="mt-3">
+            <span class="mt-3">Username</span>
+            <input type="text" formControlName="username" class="form-control mt-1">    
+        </div>
+        <div class="my-4">
+            <span class="">Password</span>
+            <input type="password" formControlName="password" class="form-control mt-1">
+        </div>
+    
+        <div class="mt-4 mb-3">
+            <input type="submit" class="e-btn d-button rounded-5" value="Register">
+        </div>
+        <div class="text-body-tertiary mb-2">Account exists already? <a href="#" class="text-orange"
+            (click)="isLogin = true">Login</a></div>
+    </form>
+    <div class="d-flex flex-column align-items-center py-2 text-orange fs-20" *ngIf="isLoggedIn">
+        <a (click)="logout()"><span>Logout</span><i class="px-2 bi bi-arrow-right"></i></a>
+    </div>
+
+</div>
